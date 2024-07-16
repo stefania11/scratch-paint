@@ -36,7 +36,6 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-intl": "^5.0.0 || ^6.0.0",
-    "react-intl-redux": "^2.0.0",
     "react-popover": "^0.5",
     "react-redux": "^9.1.2",
     "react-responsive": "^10.0.0",
