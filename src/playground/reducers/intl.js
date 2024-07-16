@@ -1,6 +1,4 @@
-import {addLocaleData} from 'react-intl';
-import {updateIntl as superUpdateIntl} from 'react-intl-redux';
-import {IntlProvider, intlReducer} from 'react-intl-redux';
+import {addLocaleData, IntlProvider} from 'react-intl';
 
 import localeData from 'scratch-l10n';
 import paintMessages from 'scratch-l10n/locales/paint-editor-msgs';
@@ -18,10 +16,20 @@ const intlInitialState = {
     }
 };
 
-const updateIntl = locale => superUpdateIntl({
-    locale: locale,
-    messages: paintMessages[locale].messages || paintMessages.en.messages
+const updateIntl = locale => ({
+    type: 'UPDATE_INTL',
+    intl: {
+        locale: locale,
+        messages: paintMessages[locale].messages || paintMessages.en.messages
+    }
 });
+
+const intlReducer = (state = intlInitialState.intl, action) => {
+    if (action.type === 'UPDATE_INTL') {
+        return {...state, ...action.intl};
+    }
+    return state;
+};
 
 export {
     intlReducer as default,

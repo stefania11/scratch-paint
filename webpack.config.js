@@ -102,7 +102,6 @@ module.exports = [
             'react': 'react',
             'react-dom': 'react-dom',
             'react-intl': 'react-intl',
-            'react-intl-redux': 'react-intl-redux',
             'react-popover': 'react-popover',
             'react-redux': 'react-redux',
             'react-responsive': 'react-responsive',
