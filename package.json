@@ -39,7 +39,7 @@
     "react-intl-redux": "^0.7 || ^2.0.0",
     "react-popover": "^0.5",
     "react-redux": "^9.1.2",
-    "react-responsive": "^5",
+    "react-responsive": "^10.0.0",
     "react-style-proptype": "^3",
     "react-tooltip": "^4",
     "redux": "^4.2.0",
